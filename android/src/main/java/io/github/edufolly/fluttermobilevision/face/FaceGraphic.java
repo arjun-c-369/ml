@@ -123,15 +123,15 @@ class FaceGraphic extends GraphicOverlay.Graphic {
         if (showText) {
             canvas.drawCircle(x, y, FACE_POSITION_RADIUS, facePositionPaint);
 
-            canvas.drawText("id: " + getId(), x + ID_X_OFFSET, y + ID_Y_OFFSET, idPaint);
+          //  canvas.drawText("id: " + getId(), x + ID_X_OFFSET, y + ID_Y_OFFSET, idPaint);
 
-            canvas.drawText("happy: " + String.format("%.2f", face.getIsSmilingProbability()),
-                    x - ID_X_OFFSET, y - ID_Y_OFFSET, idPaint);
+          //  canvas.drawText("happy: " + String.format("%.2f", face.getIsSmilingProbability()),
+             //       x - ID_X_OFFSET, y - ID_Y_OFFSET, idPaint);
 
-            canvas.drawText("right eye: " + String.format("%.2f", face.getIsRightEyeOpenProbability()),
-                    x + ID_X_OFFSET * 2, y + ID_Y_OFFSET * 2, idPaint);
+            canvas.drawText("left eye: " + String.format("%.2f", face.getIsRightEyeOpenProbability()),
+                    x  * 2, y + 40 + ID_Y_OFFSET * 2, idPaint);
 
-            canvas.drawText("left eye: " + String.format("%.2f", face.getIsLeftEyeOpenProbability()),
+            canvas.drawText("right eye: " + String.format("%.2f", face.getIsLeftEyeOpenProbability()),
                     x - ID_X_OFFSET * 2, y - ID_Y_OFFSET * 2, idPaint);
         }
 
